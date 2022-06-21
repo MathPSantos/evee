@@ -1,4 +1,29 @@
-export function App() {
-  return <h1>Hello World</h1>
+import { gql, useQuery } from "@apollo/client";
+
+import { client } from "./core/lib/apollo";
+
+const GET_LESSONS_QUERY = gql`
+  query {
+    lessons {
+      id
+      title
+    }
+  }
+`;
+
+interface Lesson {
+  id: string;
+  title: string;
 }
 
+export function App() {
+  const { data } = useQuery<{ lessons: Lesson[] }>(GET_LESSONS_QUERY);
+
+  return (
+    <ul>
+      {data?.lessons.map((lesson) => (
+        <li key={lesson.id}>{lesson.title}</li>
+      ))}
+    </ul>
+  );
+}
