@@ -1,6 +1,6 @@
-import { gql, useQuery } from "@apollo/client";
-import { useGetLessonsQuery } from "../core/graphql/generated";
-import { Lesson } from "./Lesson.component";
+import { useGetLessonsQuery } from "../../core/graphql/generated";
+
+import { Lesson } from "../widgets/Lesson.component";
 
 export function Sidebar() {
   const { data } = useGetLessonsQuery();

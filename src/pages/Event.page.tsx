@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
-import { Header } from "../components/Header.component";
-import { Sidebar } from "../components/Sidebar.component";
-import { Video } from "../components/Video.component";
+
+import { Header } from "../components/layout/Header.component";
+import { Sidebar } from "../components/layout/Sidebar.component";
+import { Video } from "../components/widgets/Video.component";
 
 export function Event() {
   const { slug } = useParams<{ slug: string }>();
