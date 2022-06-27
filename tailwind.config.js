@@ -6,7 +6,7 @@ module.exports = {
         blur: "url(/src/assets/blur-bg.png)",
       },
       fontFamily: {
-        sans: "Robotp, sans-serif",
+        sans: "Epilogue, sans-serif",
       },
       colors: {
         green: {
