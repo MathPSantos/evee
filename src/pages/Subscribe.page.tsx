@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../components/common/form/Button.component";
 
 import { Logo } from "../components/layout/Logo.component";
 
@@ -66,13 +67,13 @@ export function Subscribe() {
               onChange={event => setEmail(event.target.value)}
             />
 
-            <button
-              className="bg-green-500 mt-4 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors disabled:opacity-60"
-              disabled={loading}
+            <Button
+              className="mt-4"
+              isDisabled={loading}
               type="submit"
             >
               Garantir minha vaga
-            </button>
+            </Button>
           </form>
         </div>
       </div>
