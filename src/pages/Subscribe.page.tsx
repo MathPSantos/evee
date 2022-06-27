@@ -36,18 +36,17 @@ export function Subscribe() {
         <div className="max-w-[640px]">
           <Logo />
           <h1 className="mt-8 text-[2.5rem] leading-tight">
-            Construa uma{" "}
-            <strong className="text-blue-500">aplicação completa</strong>, do
-            zero, com <strong className="text-blue-500">React</strong>
+            A plataforma de eventos para seu{" "}
+            <strong className="text-green-500">crescimento profissional</strong>
+            !
           </h1>
           <p className="mt-4 text-gray-200 leading-relaxed">
-            Em apenas uma semana você vai dominar na prática uma das tecnologias
-            mais utilizadas e com alta demanda para acessar as melhores
-            oportunidades do mercado.
+            Faça parte dos eventos que vão ser essênciais para seu crescimento
+            profissional!
           </p>
         </div>
 
-        <div className="p-8 bg-gray-700 border border-gray-500 rounded">
+        <div className="p-8 bg-gray-700 border border-gray-500 rounded-xl">
           <strong className="text-2xl mb-6 block">
             Inscreva-se gratuitamente
           </strong>
