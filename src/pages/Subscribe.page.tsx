@@ -1,12 +1,13 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/common/form/Button.component";
+import { Input } from "../components/common/form/Input.component";
 
 import { Logo } from "../components/layout/Logo.component";
 
 import { useCreateSubscriberMutation } from "../core/graphql/generated";
 
-import codeMockupImg from "/src/assets/code-mockup.png"
+import codeMockupImg from "/src/assets/code-mockup.png";
 
 export function Subscribe() {
   const navigate = useNavigate();
@@ -22,11 +23,11 @@ export function Subscribe() {
     await createSubscriber({
       variables: {
         name,
-        email
-      }
-    })
+        email,
+      },
+    });
 
-    navigate('/event')
+    navigate("/event");
   }
 
   return (
@@ -51,27 +52,24 @@ export function Subscribe() {
             Inscreva-se gratuitamente
           </strong>
 
-          <form className="w-full flex flex-col gap-2" onSubmit={handleSubscribe}>
-            <input
-              className="bg-gray-900 rounded px-5 h-14"
+          <form
+            className="w-full flex flex-col gap-2"
+            onSubmit={handleSubscribe}
+          >
+            <Input
               type="text"
               placeholder="Seu nome completo"
               value={name}
-              onChange={event => setName(event.target.value)}
+              onChange={(event) => setName(event.target.value)}
             />
-            <input
-              className="bg-gray-900 rounded px-5 h-14"
+            <Input
               type="email"
               placeholder="Digite seu e-mail"
               value={email}
-              onChange={event => setEmail(event.target.value)}
+              onChange={(event) => setEmail(event.target.value)}
             />
 
-            <Button
-              className="mt-4"
-              isDisabled={loading}
-              type="submit"
-            >
+            <Button className="mt-4" isDisabled={loading} type="submit">
               Garantir minha vaga
             </Button>
           </form>
