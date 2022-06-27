@@ -47,7 +47,7 @@ export function Video({ lessonSlug }: VideoProps) {
             {data.lesson.teacher && (
               <div className="flex items-center gap-4 mt-6">
                 <img
-                  className="h-16 w-16 rounded-full border-2 border-blue-500"
+                  className="h-16 w-16 rounded-full ring-1 ring-offset-2 ring-green-100 ring-offset-gray-900"
                   src={data.lesson.teacher.avatarURL}
                   alt={data.lesson.teacher.name}
                 />
@@ -67,14 +67,14 @@ export function Video({ lessonSlug }: VideoProps) {
           <div className="flex flex-col gap-4">
             <a
               href="#"
-              className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors"
+              className="p-4 text-sm bg-green-100 text-gray-900 flex items-center rounded-lg font-bold uppercase gap-2 justify-center hover:brightness-90 transition"
             >
               <DiscordLogo size={24} />
               Comunidade do Discord
             </a>
             <a
               href="#"
-              className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors"
+              className="p-4 text-sm border border-white text-white flex items-center rounded-lg font-bold uppercase gap-2 justify-center hover:bg-green-100 hover:text-gray-900 transition"
             >
               <Lightning size={24} /> Comunidade do Discord
             </a>
@@ -84,9 +84,9 @@ export function Video({ lessonSlug }: VideoProps) {
         <div className="gap-8 mt-20 grid grid-cols-2">
           <a
             href=""
-            className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
+            className="bg-gray-700 rounded-lg overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
           >
-            <div className="bg-green-700 h-full p-6 flex items-center">
+            <div className="bg-green-100 text-gray-900 h-full p-6 flex items-center">
               <FileArrowDown size={40} />
             </div>
             <div className="py-6 leading-relaxed">
@@ -103,9 +103,9 @@ export function Video({ lessonSlug }: VideoProps) {
 
           <a
             href=""
-            className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
+            className="bg-gray-700 rounded-lg overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
           >
-            <div className="bg-green-700 h-full p-6 flex items-center">
+            <div className="bg-green-100 text-gray-900 h-full p-6 flex items-center">
               <Image size={40} />
             </div>
             <div className="py-6 leading-relaxed">

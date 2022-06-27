@@ -34,15 +34,15 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
       <span className="text-gray-300">{availabledDateFormatted}</span>
 
       <div
-        className={`rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 transition-colors ${
-          isActiveLesson && "bg-green-500"
+        className={`rounded-lg bg-gray-600 p-4 mt-2 group-hover:bg-gray-500 transition-colors ${
+          isActiveLesson && "bg-green-500 border-none"
         }`}
       >
         <header className="flex items-center justify-between">
           {isLessonAvailable ? (
             <span
-              className={`text-s font-semibold flex items-center gap-2 ${
-                isActiveLesson ? "text-white" : "text-blue-500"
+              className={`text-sm font-semibold flex items-start gap-1 ${
+                isActiveLesson ? "text-white" : "text-green-100"
               }`}
             >
               <CheckCircle size={20} />
