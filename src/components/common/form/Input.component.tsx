@@ -1,5 +1,5 @@
 import { InputHTMLAttributes } from "react";
-import { classNames } from "../../../core/utils/classNames";
+import { classNames } from "../../../core/utils/classnames";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
