@@ -1,19 +1,19 @@
-import { FormEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Button } from "../components/common/form/Button.component";
-import { Input } from "../components/common/form/Input.component";
+import { FormEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '../components/common/form/Button/Button.component';
+import { Input } from '../components/common/form/Input.component';
 
-import { Logo } from "../components/layout/Logo.component";
+import { Logo } from '../components/layout/Logo.component';
 
-import { useCreateSubscriberMutation } from "../core/graphql/generated";
+import { useCreateSubscriberMutation } from '../core/graphql/generated';
 
-import codeMockupImg from "/src/assets/code-mockup.png";
+import codeMockupImg from '/src/assets/code-mockup.png';
 
 export function Subscribe() {
   const navigate = useNavigate();
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
   const [createSubscriber, { loading }] = useCreateSubscriberMutation();
 
@@ -27,7 +27,7 @@ export function Subscribe() {
       },
     });
 
-    navigate("/event");
+    navigate('/event');
   }
 
   return (
@@ -36,7 +36,7 @@ export function Subscribe() {
         <div className="max-w-[640px]">
           <Logo />
           <h1 className="mt-8 text-[2.5rem] leading-tight">
-            A plataforma de eventos para seu{" "}
+            A plataforma de eventos para seu{' '}
             <strong className="text-green-500">crescimento profissional</strong>
             !
           </h1>
